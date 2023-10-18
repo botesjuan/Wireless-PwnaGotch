@@ -29,4 +29,20 @@ chmod 777 /home/pi/handshakes
 exit
 ```
 
+>Transfer PCAP to Kali for converting to HASHCAT format 22000:
+
+```
+sudo apt-get install hcxtools
+
+hcxpcapngtool *.pcap -o candidates.hc22000 -E essid.wordlist
+```
+
+>Transfer to hashcat host:
+
+```
+hashcat.exe -m 22000 s:\hashes\candidates.hc22000 s:\wordlists\essid.wordlist
+```
+
+>Wireless WPA passwords cracking.
+
 
