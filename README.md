@@ -16,5 +16,17 @@
 4. Use browser and connect `http://10.0.0.2:8080` with user name of `admin:admin`
 5. From windows command line connect as ssh to raspberry pi `ssh pi@10.0.02` with default password as `raspberry`
 
+>In the ssh session on the raspberry pi, transfer the files:
+
+```
+ssh pi@10.0.0.2
+
+sudo su
+cd /root/handshakes
+
+cp /root/handshakes/ /home/pi/handshakes/ -R
+chmod 777 /home/pi/handshakes
+exit
+```
 
 
